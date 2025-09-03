@@ -12,13 +12,22 @@
     //PROCESSAMENTO
     let nomeM = [];
     let nomeF = [];
+    let nome = ""
 
-
+     alert("Diga se os nomes são masculinos(M) ou femininos(F)");
     for(let nomes of listaDeNomes){
-        prompt(nomes)
+       nome = prompt(nomes).toUpperCase().trim()
+       if(nome == "M"){
+        nomeM.push(nomes);
+        
+       }
+       else if(nome == "F"){
+        nomeF.push(nomes);
+       }
     }
 
     
     //SAÍDA
+    document.write(`Nomes masculinos: ${nomeM}.<br> Nomes Femininos: ${nomeF}.`)
 
 </script>
